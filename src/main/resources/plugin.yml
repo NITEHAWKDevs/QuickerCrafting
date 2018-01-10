@@ -1,13 +1,17 @@
-name: QuickCraft
-main: io.github.NITEHAWKDevs.quickcraft.QuickCraft
-version: 1.0.0
+name: QuickerCrafting
+main: io.github.NITEHAWKDevs.quickercrafting.QuickerCrafting
+version: 1.1.0
 commands:
   craft:
     description: Crafts the given item if the user has the items needed
     usage: /command [Item]
-    permission: QuickCraft.craft
-    permission-message: You don't have the permission QuickCraft.craft! If you think this is an error please contact an Operator.
+    permission: QuickerCrafting.craft
+    permission-message: You don't have the permission QuickerCrafting.craft! If you think this is an error please contact an Operator.
 permissions:
-  QuickCraft.craft:
+  QuickerCrafting.*:
+    description: Gives the user permission to use all commands
+    children:
+      QuickerCrafting.craft
+  QuickerCrafting.craft:
     description: Allows you to use the craft command
     default: true
